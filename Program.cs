@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MJPruebaProgreso1.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MJPruebaProgreso1Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MJPruebaProgreso1Context") ?? throw new InvalidOperationException("Connection string 'MJPruebaProgreso1Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

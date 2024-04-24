@@ -4,7 +4,10 @@ namespace MJPruebaProgreso1.Models
 {
     public class MJ_Tacos
     {
+        [Key]
         public int TacoID { get; set; }
+
+
         [Required(ErrorMessage ="Debe ingresar el nombre para su taco")]
         public string MJ_NombreTaco { get; set; }
         [Required(ErrorMessage ="Debe ingresar una descripcion para el producto")]
