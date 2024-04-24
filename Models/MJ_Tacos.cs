@@ -9,6 +9,7 @@ namespace MJPruebaProgreso1.Models
 
 
         [Required(ErrorMessage ="Debe ingresar el nombre para su taco")]
+        [MaxLength(20, ErrorMessage ="El Tamanio maximo del nombre debe ser 40 caracteres")]
         public string? MJ_NombreTaco { get; set; }
         [Required(ErrorMessage ="Debe ingresar una descripcion para el producto")]
         [MinLength(10, ErrorMessage ="La descripcion del producto debe ser de almenos 10 caracteres")]
