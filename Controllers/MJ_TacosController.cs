@@ -20,7 +20,7 @@ namespace MJPruebaProgreso1.Controllers
         }
 
         // GET: MJ_Tacos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> MJCrearTaco()
         {
             return View(await _context.MJ_Tacos.ToListAsync());
         }
@@ -60,7 +60,7 @@ namespace MJPruebaProgreso1.Controllers
             {
                 _context.Add(mJ_Tacos);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(MJCrearTaco));
             }
             return View(mJ_Tacos);
         }
@@ -111,7 +111,7 @@ namespace MJPruebaProgreso1.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(MJCrearTaco));
             }
             return View(mJ_Tacos);
         }
@@ -146,7 +146,7 @@ namespace MJPruebaProgreso1.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(MJCrearTaco));
         }
 
         private bool MJ_TacosExists(int id)
