@@ -7,7 +7,7 @@
 <h1>Crea tu taco por Mateo Jaramillo</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="MJCreate">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.MJ_Guacamole)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.TacoID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TacoID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TacoID">Delete</a>
+                <a asp-action="MJEdit" asp-route-id="@item.TacoID">Edit</a> |
+                <a asp-action="MJDetails" asp-route-id="@item.TacoID">Details</a> |
+                <a asp-action="MJDelete" asp-route-id="@item.TacoID">Delete</a>
             </td>
         </tr>
 }

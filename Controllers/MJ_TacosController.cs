@@ -26,7 +26,7 @@ namespace MJPruebaProgreso1.Controllers
         }
 
         // GET: MJ_Tacos/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> MJDetails(int? id)
         {
             if (id == null)
             {
@@ -44,7 +44,7 @@ namespace MJPruebaProgreso1.Controllers
         }
 
         // GET: MJ_Tacos/Create
-        public IActionResult Create()
+        public IActionResult MJCreate()
         {
             return View();
         }
@@ -54,7 +54,7 @@ namespace MJPruebaProgreso1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TacoID,MJ_NombreTaco,MJ_DescripcionDelTaco,MJ_PrecioTaco,MJ_Fecha,MJ_Guacamole")] MJ_Tacos mJ_Tacos)
+        public async Task<IActionResult> MJCreate([Bind("TacoID,MJ_NombreTaco,MJ_DescripcionDelTaco,MJ_PrecioTaco,MJ_Fecha,MJ_Guacamole")] MJ_Tacos mJ_Tacos)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +66,7 @@ namespace MJPruebaProgreso1.Controllers
         }
 
         // GET: MJ_Tacos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> MJEdit(int? id)
         {
             if (id == null)
             {
@@ -86,7 +86,7 @@ namespace MJPruebaProgreso1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TacoID,MJ_NombreTaco,MJ_DescripcionDelTaco,MJ_PrecioTaco,MJ_Fecha,MJ_Guacamole")] MJ_Tacos mJ_Tacos)
+        public async Task<IActionResult> MJEdit(int id, [Bind("TacoID,MJ_NombreTaco,MJ_DescripcionDelTaco,MJ_PrecioTaco,MJ_Fecha,MJ_Guacamole")] MJ_Tacos mJ_Tacos)
         {
             if (id != mJ_Tacos.TacoID)
             {
@@ -117,7 +117,7 @@ namespace MJPruebaProgreso1.Controllers
         }
 
         // GET: MJ_Tacos/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> MJDelete(int? id)
         {
             if (id == null)
             {
@@ -135,7 +135,7 @@ namespace MJPruebaProgreso1.Controllers
         }
 
         // POST: MJ_Tacos/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("MJDelete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
