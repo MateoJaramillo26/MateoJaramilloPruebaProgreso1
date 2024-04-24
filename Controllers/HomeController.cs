@@ -13,7 +13,7 @@ namespace MJPruebaProgreso1.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult MJ_Index()
         {
             return View();
         }
