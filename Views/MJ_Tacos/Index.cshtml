@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MJPruebaProgreso1.Models.MJ_Tacos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MJ_NombreTaco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MJ_DescripcionDelTaco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MJ_PrecioTaco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MJ_Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MJ_Guacamole)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MJ_NombreTaco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MJ_DescripcionDelTaco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MJ_PrecioTaco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MJ_Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MJ_Guacamole)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TacoID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TacoID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TacoID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

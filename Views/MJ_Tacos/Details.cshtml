@@ -1,0 +1,48 @@
+﻿@model MJPruebaProgreso1.Models.MJ_Tacos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MJ_Tacos</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MJ_NombreTaco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MJ_NombreTaco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MJ_DescripcionDelTaco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MJ_DescripcionDelTaco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MJ_PrecioTaco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MJ_PrecioTaco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MJ_Fecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MJ_Fecha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MJ_Guacamole)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MJ_Guacamole)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.TacoID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
